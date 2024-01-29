@@ -1,5 +1,11 @@
 #include <iostream>
+#include "ScopedTimer.h"
 
 int main() {
-	std::cout << "Hello World!" << std::endl;
+	{
+		ScopedTimer timer("Time: ");
+		for (int i = 0; i < 10000; i++) {
+			std::cout << 3 * i * i << std::endl;
+		}
+	}
 }
