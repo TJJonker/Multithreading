@@ -1,33 +1,14 @@
 #include "ScopedTimer.h"
-#include "Random.h"
-
-//#define AMOUNT_OF_RANDOM_NUMBERS 100'000'000
-//int randomNumbers[AMOUNT_OF_RANDOM_NUMBERS];
-//Random random;
-//
-//int main() {
-//	{
-//		ScopedTimer timer("Time to randomize: ");
-//		for (int i = 0; i < AMOUNT_OF_RANDOM_NUMBERS; i++) {
-//			randomNumbers[i] = i;
-//		}
-//	}
-//
-//	{
-//		ScopedTimer timer("Time to multiply: ");
-//		for (int i = 0; i < AMOUNT_OF_RANDOM_NUMBERS; i++) {
-//			randomNumbers[i] = randomNumbers[i] * 10;
-//		}
-//	}
-//}
+#include "SSESupport.h"
 
 #include <xmmintrin.h>
-#include <iostream>
 
 void TestAddSSE();
 
 int main() {
-	TestAddSSE();
+	SSESupport::CheckSupport();
+	
+	//TestAddSSE();
 }
 
 void TestAddSSE() {
