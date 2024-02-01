@@ -34,4 +34,5 @@ void SSESupport::CheckSupport()
 #else
     std::cout << "CPUID detection not supported on this platform." << std::endl;
 #endif
+    std::cout << std::endl;
 }

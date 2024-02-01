@@ -127,15 +127,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\Random.cpp" />
-    <ClCompile Include="src\ScopedTimer.cpp" />
+    <ClCompile Include="src\Tests\FloatAddition\FloatAddition.cpp" />
+    <ClCompile Include="src\Utils\ScopedTimer\ScopedTimer.cpp" />
     <ClCompile Include="src\Main.cpp" />
-    <ClCompile Include="src\SSESupport.cpp" />
+    <ClCompile Include="src\Utils\SSESupport\SSESupport.cpp" />
+    <ClCompile Include="src\TestingEnvironment\TestingEnvironment.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Random.h" />
-    <ClInclude Include="src\ScopedTimer.h" />
-    <ClInclude Include="src\SSESupport.h" />
+    <ClInclude Include="src\Tests\FloatAddition\FloatAddition.h" />
+    <ClInclude Include="src\Tests\ITest.h" />
+    <ClInclude Include="src\Utils\ScopedTimer\ScopedTimer.h" />
+    <ClInclude Include="src\Utils\SSESupport\SSESupport.h" />
+    <ClInclude Include="src\TestingEnvironment\TestingEnvironment.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

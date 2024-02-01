@@ -18,24 +18,33 @@
     <ClCompile Include="src\Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\ScopedTimer.cpp">
+    <ClCompile Include="src\Utils\ScopedTimer\ScopedTimer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Random.cpp">
+    <ClCompile Include="src\Utils\SSESupport\SSESupport.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\SSESupport.cpp">
+    <ClCompile Include="src\TestingEnvironment\TestingEnvironment.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Tests\FloatAddition\FloatAddition.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\ScopedTimer.h">
+    <ClInclude Include="src\Utils\ScopedTimer\ScopedTimer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Random.h">
+    <ClInclude Include="src\Utils\SSESupport\SSESupport.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\SSESupport.h">
+    <ClInclude Include="src\TestingEnvironment\TestingEnvironment.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Tests\FloatAddition\FloatAddition.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Tests\ITest.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -1,13 +1,30 @@
-#include "ScopedTimer.h"
-#include "SSESupport.h"
+#include "Utils/ScopedTimer/ScopedTimer.h"
+#include "Utils/SSESupport/SSESupport.h"
 
 #include <xmmintrin.h>
+#include "Tests/FloatAddition/FloatAddition.h"
+#include "TestingEnvironment/TestingEnvironment.h"
+#include <iostream>
 
 void TestAddSSE();
+TestingEnvironment testingEnvironment;
+FloatAddition floatAddition;
 
 int main() {
 	SSESupport::CheckSupport();
-	
+	testingEnvironment.SetTest([&](float* a, float* b, float* r, size_t size) { floatAddition.Execute(a, b, r, size); });
+	testingEnvironment.SetResultCheck([&](float* a, float* b, float* r, size_t size) 
+		{  
+			bool success = true;
+			for (int i = 0; i < size; i++)
+				success &= (a[i] + b[i] == r[i]);
+			
+			if (success)
+				std::cout << "Test Succesful!" << std::endl;
+			else
+				std::cout << "Test Failed..." << std::endl;
+		});
+	testingEnvironment.RunTest();
 	//TestAddSSE();
 }
 
