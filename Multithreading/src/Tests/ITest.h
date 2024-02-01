@@ -1,5 +1,5 @@
 #pragma once
 
 struct ITest {
-	virtual void Execute(float*, float*, float*, size_t) = 0;
+	virtual void Execute(const float*, const float*, float*, size_t) = 0;
 };

@@ -1,7 +1,7 @@
 #pragma once
 #include <functional>
 
-typedef std::function<void(float*, float*, float*, size_t)> TestFunction;
+typedef std::function<void(const float* a, const float* b, float* r, const size_t size)> TestFunction;
 
 class TestingEnvironment
 {

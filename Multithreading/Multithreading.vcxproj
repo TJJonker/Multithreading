@@ -127,18 +127,24 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\Tests\AVX512Addition\AVX512Addition.cpp" />
     <ClCompile Include="src\Tests\FloatAddition\FloatAddition.cpp" />
     <ClCompile Include="src\Utils\ScopedTimer\ScopedTimer.cpp" />
     <ClCompile Include="src\Main.cpp" />
     <ClCompile Include="src\Utils\SSESupport\SSESupport.cpp" />
     <ClCompile Include="src\TestingEnvironment\TestingEnvironment.cpp" />
+    <ClCompile Include="src\Tests\SSEAddition\SSEAddition.cpp" />
+    <ClCompile Include="src\Tests\AVXAddition\AVXAddition.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Tests\AVX512Addition\AVX512Addition.h" />
     <ClInclude Include="src\Tests\FloatAddition\FloatAddition.h" />
     <ClInclude Include="src\Tests\ITest.h" />
     <ClInclude Include="src\Utils\ScopedTimer\ScopedTimer.h" />
     <ClInclude Include="src\Utils\SSESupport\SSESupport.h" />
     <ClInclude Include="src\TestingEnvironment\TestingEnvironment.h" />
+    <ClInclude Include="src\Tests\SSEAddition\SSEAddition.h" />
+    <ClInclude Include="src\Tests\AVXAddition\AVXAddition.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

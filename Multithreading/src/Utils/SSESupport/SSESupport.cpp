@@ -20,6 +20,11 @@ void SSESupport::CheckSupport()
         std::cout << "AVX is supported." << std::endl;
     // Add more checks for other SIMD instruction sets if needed
 
+        // Check for AVX-512 using extended CPUID
+    __cpuidex(info, 7, 0);
+    if (info[1] & (1 << 16))
+        std::cout << "AVX-512 is supported." << std::endl;
+
 #elif defined(__GNUC__) || defined(__clang__)
     unsigned int eax, ebx, ecx, edx;
     __get_cpuid(1, &eax, &ebx, &ecx, &edx);
@@ -30,6 +35,11 @@ void SSESupport::CheckSupport()
     if (ecx & bit_AVX)
         std::cout << "AVX is supported." << std::endl;
     // Add more checks for other SIMD instruction sets if needed
+
+    // Check for AVX-512 using extended CPUID
+    __get_cpuid(7, &eax, &ebx, &ecx, &edx);
+    if (ebx & (1 << 16))
+        std::cout << "AVX-512 is supported." << std::endl;
 
 #else
     std::cout << "CPUID detection not supported on this platform." << std::endl;
